@@ -1,0 +1,179 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AplicacionVenta.MainPage">
+
+    <!--<StackLayout Orientation="Vertical">
+
+        <HorizontalStackLayout HorizontalOptions="Center" Spacing="10">
+            <Label x:Name="lblCategorias" FontSize="Medium" />
+            <Label x:Name="lblProductos" FontSize="Medium" />
+            <Label x:Name="lblClientes" FontSize="Medium" />
+        </HorizontalStackLayout>
+
+        <Label Text="Aplicación Venta" VerticalOptions="Center" HorizontalOptions="Center"/>
+
+    </StackLayout>-->
+
+    <!--<Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="2*" />
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <Label x:Name="lblCategorias" FontSize="Medium" Grid.Row="0" Grid.Column="0"/>
+        <Label x:Name="lblProductos" FontSize="Medium" Grid.Row="0" Grid.Column="1"/>
+        <Label x:Name="lblClientes" FontSize="Medium" Grid.Row="1" Grid.Column="0"/>
+        <Button Text="Guardar" Grid.Row="2" Grid.ColumnSpan="2" HorizontalOptions="Center"/>
+    </Grid>-->
+
+    <!--<FlexLayout Direction="Column" AlignContent="Center">-->
+    <!--JustifyContent="SpaceEvenly"-->
+    <!--
+
+        <Label Text="Nombre:" FlexLayout.Basis="5%"/>
+        <Label Text="Apellido:" />
+
+        <Label Text="Productos:" />
+        <Border>
+            <CollectionView>
+                
+            </CollectionView>
+        </Border>
+
+        <Button Text="Guardar" />
+        <Button Text="Ver" />
+
+    </FlexLayout>-->
+
+    <!--<AbsoluteLayout>
+        <Button Text="Guardar" AbsoluteLayout.LayoutBounds="4, 4, 100, 50"/>
+        <Button Text="Ver" AbsoluteLayout.LayoutBounds="105, 4, 100, 50"/>
+        <Label Text=".NET MAUI" AbsoluteLayout.LayoutBounds="4, 60, 100, 50"/>
+
+        <Rectangle Background="Yellow" AbsoluteLayout.LayoutBounds="40, 125, 5, 100"/>
+        <Rectangle Background="Yellow" AbsoluteLayout.LayoutBounds="35, 215, 100, 5"/>
+
+    </AbsoluteLayout>-->
+
+    <!--<Grid ColumnDefinitions="*,*" RowDefinitions="*,*" Style="{StaticResource MiGrid}">
+        <Grid.GestureRecognizers>
+            <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" />
+        </Grid.GestureRecognizers>
+
+        <Label FontSize="30" Text="Dato 1" /> -->
+    <!--0,0-->
+    <!--
+        <Label FontSize="30" Text="Dato 2" Grid.Column="1"/> -->
+    <!--Fila por defecto es 0-->
+    <!--
+        <Label FontSize="30" Text="Dato 3" Grid.Column="1" Grid.Row="1"/>
+
+    </Grid>-->
+
+    <!--<VerticalStackLayout>
+        <Button Text="Botón" />
+        <DatePicker />
+        <Entry Placeholder="Esto es una caja de texto" />
+        <Editor Placeholder="Este es un editor" HeightRequest="150" />
+        <Picker>
+            <Picker.Items>
+                <x:String>Lina Mora</x:String>
+                <x:String>Mariana Yate</x:String>
+                <x:String>Juan Yate</x:String>
+                <x:String>Jairo Yate</x:String>
+            </Picker.Items>
+        </Picker>
+        <Stepper Minimum="0" Maximum="10" Increment="1" />
+        <Switch IsToggled="False" />
+        <Slider Minimum="0" Maximum="1" />
+        <TimePicker/>
+    </VerticalStackLayout>-->
+
+    <!--<VerticalStackLayout>
+        <Ellipse WidthRequest="200" HeightRequest="200">
+            <Ellipse.Fill>
+                <SolidColorBrush Color="Orange" />
+            </Ellipse.Fill>
+        </Ellipse>
+
+        <Rectangle WidthRequest="100" HeightRequest="80" Fill="Blue">
+            <Rectangle.GestureRecognizers>
+                <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" />
+            </Rectangle.GestureRecognizers>
+        </Rectangle>
+        
+    </VerticalStackLayout>-->
+
+    <Grid
+        ColumnDefinitions="Auto, Auto"
+        RowDefinitions="Auto, Auto, Auto"
+        VerticalOptions="Center"
+        HorizontalOptions="Center">
+
+        <!--Categorias-->
+        <Ellipse
+            WidthRequest="50"
+            HeightRequest="50"
+            Fill="Black"
+            Margin="4"/>
+        <Label
+            x:Name="lblCategorias"
+            VerticalTextAlignment="Center"
+            HorizontalTextAlignment="Center"
+            FontSize="30" />
+        <Label
+            Grid.Column="1"
+            Text="Categorias"
+            VerticalTextAlignment="Center"
+            FontSize="30" />
+
+        <!--Productos-->
+        <Ellipse
+            Grid.Row="1"
+            WidthRequest="50"
+            HeightRequest="50"
+            Fill="Black"
+            Margin="4"/>
+        <Label
+            Grid.Row="1"
+            x:Name="lblProductos"
+            VerticalTextAlignment="Center"
+            HorizontalTextAlignment="Center"
+            FontSize="30" />
+        <Label
+            Grid.Row="1"
+            Grid.Column="1"
+            Text="Productos"
+            VerticalTextAlignment="Center"
+            FontSize="30" />
+
+        <!--Clientes-->
+        <Ellipse
+            Grid.Row="2"
+            WidthRequest="50"
+            HeightRequest="50"
+            Fill="Black"
+            Margin="4"/>
+        <Label
+            Grid.Row="2"
+            x:Name="lblClientes"
+            VerticalTextAlignment="Center"
+            HorizontalTextAlignment="Center"
+            FontSize="30" />
+        <Label
+            Grid.Row="2"
+            Grid.Column="1"
+            Text="Clientes"
+            VerticalTextAlignment="Center"
+            FontSize="30" />
+
+    </Grid>
+
+</ContentPage>
