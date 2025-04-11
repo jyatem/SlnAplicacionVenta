@@ -1,7 +1,7 @@
 ﻿using AplicacionVenta.DataAccess;
 using Microsoft.Maui.Controls.Shapes;
 
-namespace AplicacionVenta
+namespace AplicacionVenta.Views
 {
     public partial class MainPage : ContentPage
     {
