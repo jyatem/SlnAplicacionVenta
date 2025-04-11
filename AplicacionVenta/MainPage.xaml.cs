@@ -23,6 +23,11 @@ namespace AplicacionVenta
             #endregion
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private async void TapGestureRecognizer_Tapped(object sender, TappedEventArgs e)
         {
             //await DisplayAlert("Mensaje en MAUI", "Aplicación MAUI", "Ok", "Cancelar");
