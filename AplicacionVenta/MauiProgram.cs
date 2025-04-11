@@ -3,6 +3,7 @@ using Microsoft.Extensions.Logging;
 
 namespace AplicacionVenta
 {
+    // Creado por XXX
     public static class MauiProgram
     {
         public static MauiApp CreateMauiApp()
