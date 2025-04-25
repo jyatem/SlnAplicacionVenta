@@ -8,13 +8,38 @@
     Title="AplicacionVenta">
 
     <ShellContent
-        Title="Home"
-        ContentTemplate="{DataTemplate views:MainPage}"
-        Route="MainPage" />
-
-    <ShellContent
         Title="Acerca de..."
         ContentTemplate="{DataTemplate views:AcercaDePage}"
         Route="AcercaDePage" />
+
+    <FlyoutItem Title="Configuración">
+        <Tab Title="Resumen">
+            <ShellContent
+                Title="Resumen"
+                ContentTemplate="{DataTemplate views:MainPage}"
+                Route="MainPage" />
+        </Tab>
+
+        <Tab Title="Productos">
+            <ShellContent
+                Title="Productos"
+                ContentTemplate="{DataTemplate views:ProductosPage}"
+                Route="ProductosPage" />
+        </Tab>
+
+        <Tab Title="Categorias">
+            <ShellContent
+                Title="Categorias"
+                ContentTemplate="{DataTemplate views:CategoriasPage}"
+                Route="CategoriasPage" />
+        </Tab>
+
+        <Tab Title="Clientes">
+            <ShellContent
+                Title="Clientes"
+                ContentTemplate="{DataTemplate views:ClientesPage}"
+                Route="ClientesPage" />
+        </Tab>
+    </FlyoutItem>
 
 </Shell>

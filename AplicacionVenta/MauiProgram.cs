@@ -1,4 +1,5 @@
 ﻿using AplicacionVenta.DataAccess;
+using AplicacionVenta.Views;
 using Microsoft.Extensions.Logging;
 
 namespace AplicacionVenta
@@ -20,6 +21,8 @@ namespace AplicacionVenta
             var dbContext = new VentaDbContext();
             dbContext.Database.EnsureCreated();
             dbContext.Dispose();
+
+            Routing.RegisterRoute(nameof(ProductoDetallePage), typeof(ProductoDetallePage));
 
 #if DEBUG
     		builder.Logging.AddDebug();
