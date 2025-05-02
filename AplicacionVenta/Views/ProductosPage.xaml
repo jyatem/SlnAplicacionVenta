@@ -2,8 +2,19 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="AplicacionVenta.Views.ProductosPage"
+             xmlns:handlers="clr-namespace:AplicacionVenta.Handlers"
              Title="ProductosPage">
 
-    <VerticalStackLayout x:Name="container"/>
+    <Shell.SearchHandler>
+        <handlers:ProductoBusquedaHandler Placeholder="Buscar productos" ShowsResults="True">
+            <SearchHandler.ItemTemplate>
+                <DataTemplate>
+                    <Label Text="{Binding Nombre}" />
+                </DataTemplate>
+            </SearchHandler.ItemTemplate>
+        </handlers:ProductoBusquedaHandler>
+    </Shell.SearchHandler>
+
+    <VerticalStackLayout x:Name="container" Spacing="10"/>
     
 </ContentPage>

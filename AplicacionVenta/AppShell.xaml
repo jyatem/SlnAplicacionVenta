@@ -5,7 +5,19 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:views="clr-namespace:AplicacionVenta.Views"
     Shell.FlyoutBehavior="Flyout"
+    xmlns:info="clr-namespace:Microsoft.Maui.ApplicationModel;assembly=Microsoft.Maui.Essentials"
     Title="AplicacionVenta">
+
+    <Shell.FlyoutHeader>
+        <Image Source="dotnet_bot.png" WidthRequest="120" Margin="10" />
+    </Shell.FlyoutHeader>
+
+    <Shell.FlyoutFooter>
+        <VerticalStackLayout Padding="10">
+            <Label Text="{x:Static info:AppInfo.Name}" />
+            <Label Text="{x:Static info:AppInfo.VersionString}" />
+        </VerticalStackLayout>
+    </Shell.FlyoutFooter>
 
     <ShellContent
         Title="Acerca de..."
@@ -41,5 +53,11 @@
                 Route="ClientesPage" />
         </Tab>
     </FlyoutItem>
+
+    <ShellContent Title="Soporte" ContentTemplate="{DataTemplate views:SoportePage}" Route="SoportePage" />
+
+    <MenuItem
+        Text="Abrir página"
+        Clicked="MenuItem_Clicked" />
 
 </Shell>

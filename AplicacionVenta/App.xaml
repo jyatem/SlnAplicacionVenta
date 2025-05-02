@@ -5,13 +5,13 @@
              x:Class="AplicacionVenta.App">
     <Application.Resources>
         <ResourceDictionary>
-            <Style TargetType="Grid">
+            <!--<Style TargetType="Grid">
                 <Setter Property="Background">
                     <Setter.Value>
                         <SolidColorBrush Color="LightBlue" />
                     </Setter.Value>
                 </Setter>
-            </Style>
+            </Style>-->
             <Style TargetType="Grid" x:Key="MiGrid">
                 <Setter Property="Background">
                     <Setter.Value>

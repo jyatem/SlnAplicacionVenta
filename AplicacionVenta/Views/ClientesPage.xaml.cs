@@ -12,7 +12,7 @@ public partial class ClientesPage : ContentPage
 
         foreach (var cliente in dbContext.Clientes)
         {
-            container.Children.Add(new Label { Text = cliente.Nombre });
+            container.Children.Add(new Label { Text = cliente.Nombre, FontSize = 16, Margin = new Thickness(10, 5) });
         }
     }
 }

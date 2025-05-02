@@ -12,7 +12,7 @@ public partial class CategoriasPage : ContentPage
 
         foreach (var categoria in dbContext.Categorias)
         {
-            container.Children.Add(new Label { Text = categoria.Nombre });
+            container.Children.Add(new Label { Text = categoria.Nombre, FontSize = 16, Margin = new Thickness(10, 5) });
         }
     }
 }

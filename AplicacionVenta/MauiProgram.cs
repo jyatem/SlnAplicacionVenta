@@ -23,6 +23,7 @@ namespace AplicacionVenta
             dbContext.Dispose();
 
             Routing.RegisterRoute(nameof(ProductoDetallePage), typeof(ProductoDetallePage));
+            Routing.RegisterRoute(nameof(SoporteDetallePage), typeof(SoporteDetallePage));
 
 #if DEBUG
     		builder.Logging.AddDebug();
