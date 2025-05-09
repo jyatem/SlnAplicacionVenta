@@ -6,14 +6,14 @@
              Title="SoportePage">
 
     <ContentPage.Resources>
-        <models:SoporteData x:Key="data" />
+        <models:SoporteData x:Key="data" VisitasPendientes="10"/>
     </ContentPage.Resources>
     
     <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+        <Label Text="{Binding Source={StaticResource data}, Path=VisitasPendientes, Mode=OneWay}" FontSize="Large"/>
+
+        <Button Text="Actualizar" Clicked="Button_Clicked" />
+        
     </VerticalStackLayout>
-    
+
 </ContentPage>

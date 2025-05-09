@@ -1,3 +1,5 @@
+using AplicacionVenta.Models;
+
 namespace AplicacionVenta.Views;
 
 public partial class SoportePage : ContentPage
@@ -6,4 +8,10 @@ public partial class SoportePage : ContentPage
 	{
 		InitializeComponent();
 	}
+
+    private void Button_Clicked(object sender, EventArgs e)
+    {
+		var dataObject = Resources["data"] as SoporteData;
+		dataObject.VisitasPendientes = 15;
+    }
 }
