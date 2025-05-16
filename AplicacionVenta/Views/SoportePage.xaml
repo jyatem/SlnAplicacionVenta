@@ -5,15 +5,20 @@
              xmlns:models="clr-namespace:AplicacionVenta.Models"
              Title="SoportePage">
 
-    <ContentPage.Resources>
-        <models:SoporteData x:Key="data" VisitasPendientes="10"/>
-    </ContentPage.Resources>
+    <ContentPage.BindingContext>
+        <models:SoporteData/>
+    </ContentPage.BindingContext>
     
-    <VerticalStackLayout>
-        <Label Text="{Binding Source={StaticResource data}, Path=VisitasPendientes, Mode=OneWay}" FontSize="Large"/>
+    <Grid RowDefinitions="Auto,*">
+        <Label Text="{Binding Clientes.Count, Mode=OneWay}" FontSize="Large"/>
 
-        <Button Text="Actualizar" Clicked="Button_Clicked" />
+        <CollectionView Grid.Row="1" 
+                        SelectionMode="Single"
+                        SelectedItem="{Binding ClienteSeleccionado, Mode=TwoWay}"
+                        ItemsSource="{Binding Clientes, Mode=OneWay}" />
+
+        <!--<Button Text="Actualizar" Clicked="Button_Clicked" />-->
         
-    </VerticalStackLayout>
+    </Grid>
 
 </ContentPage>
